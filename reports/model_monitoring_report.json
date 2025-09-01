@@ -1,0 +1,59 @@
+[
+  {
+    "timestamp": "2025-09-01T18:51:16.107909",
+    "performance_metrics": {
+      "timestamp": "2025-09-01T18:51:15.959176",
+      "accuracy": 0.8753198894462074,
+      "precision": 0.7889576883384933,
+      "recall": 0.6539777587681779,
+      "f1_score": 0.715154349859682,
+      "roc_auc": 0.930894252788615,
+      "sample_size": 9769
+    },
+    "data_drift": {
+      "age": {
+        "ks_statistic": 0.014516586179939672,
+        "p_value": 0.07350726593190315,
+        "drift_detected": "False",
+        "severity": "LOW"
+      },
+      "fnlwgt": {
+        "ks_statistic": 0.005920548877886539,
+        "p_value": 0.9454572822858098,
+        "drift_detected": "False",
+        "severity": "LOW"
+      },
+      "education_num": {
+        "ks_statistic": 0.0077635312608623774,
+        "p_value": 0.7307955645056676,
+        "drift_detected": "False",
+        "severity": "LOW"
+      },
+      "capital_gain": {
+        "ks_statistic": 0.005470820977766966,
+        "p_value": 0.9724682751290507,
+        "drift_detected": "False",
+        "severity": "LOW"
+      },
+      "capital_loss": {
+        "ks_statistic": 0.006426977761574526,
+        "p_value": 0.9013074372852256,
+        "drift_detected": "False",
+        "severity": "LOW"
+      },
+      "hours_per_week": {
+        "ks_statistic": 0.009438781639403593,
+        "p_value": 0.4863791896240288,
+        "drift_detected": "False",
+        "severity": "LOW"
+      }
+    },
+    "prediction_statistics": {
+      "mean_prediction": "0.23762918",
+      "std_prediction": "0.30836302",
+      "min_prediction": "3.3452256e-05",
+      "max_prediction": "0.99971884"
+    },
+    "alerts": []
+  }
+]
