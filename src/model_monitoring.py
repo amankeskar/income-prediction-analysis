@@ -86,7 +86,7 @@ class ModelMonitor:
         """
         Comprehensive model health check.
         """
-        print("🔍 RUNNING MODEL HEALTH CHECK...")
+        print("RUNNING MODEL HEALTH CHECK...")
         print("=" * 50)
         
         # 1. Performance Metrics
@@ -155,7 +155,7 @@ class ModelMonitor:
     
     def _display_health_report(self, report):
         """Display formatted health report."""
-        print("📊 MODEL PERFORMANCE:")
+        print("MODEL PERFORMANCE:")
         perf = report['performance_metrics']
         print(f"   Accuracy: {perf['accuracy']:.3f}")
         print(f"   Precision: {perf['precision']:.3f}")
@@ -163,21 +163,21 @@ class ModelMonitor:
         print(f"   F1 Score: {perf['f1_score']:.3f}")
         print(f"   ROC AUC: {perf['roc_auc']:.3f}")
         
-        print("\n🔄 DATA DRIFT ANALYSIS:")
+        print("\nDATA DRIFT ANALYSIS:")
         drift_count = sum(1 for r in report['data_drift'].values() if r['drift_detected'])
         print(f"   Features with drift: {drift_count}/{len(report['data_drift'])}")
         
         for feature, results in report['data_drift'].items():
             if results['drift_detected']:
-                print(f"   ⚠️  {feature}: {results['severity']} drift (p={results['p_value']:.4f})")
+                print(f"   WARNING: {feature}: {results['severity']} drift (p={results['p_value']:.4f})")
         
-        print("\n🚨 ALERTS:")
+        print("\nALERTS:")
         if report['alerts']:
             for alert in report['alerts']:
-                emoji = "🔴" if alert['severity'] == 'HIGH' else "🟡"
-                print(f"   {emoji} {alert['type']}: {alert['message']}")
+                symbol = "HIGH" if alert['severity'] == 'HIGH' else "MEDIUM"
+                print(f"   {symbol} {alert['type']}: {alert['message']}")
         else:
-            print("   ✅ No alerts - Model is healthy!")
+            print("   No alerts - Model is healthy!")
     
     def plot_monitoring_dashboard(self, save_path=None):
         """Create comprehensive monitoring dashboard."""
@@ -241,18 +241,18 @@ class ModelMonitor:
             axes[1, 1].pie(alert_counts, labels=alert_names, autopct='%1.1f%%', startangle=90)
             axes[1, 1].set_title('Alert Distribution', fontsize=14, fontweight='bold')
         else:
-            axes[1, 1].text(0.5, 0.5, '✅ No Alerts\nModel Healthy!', 
+            axes[1, 1].text(0.5, 0.5, 'No Alerts\nModel Healthy!', 
                            ha='center', va='center', fontsize=16, fontweight='bold',
                            transform=axes[1, 1].transAxes)
             axes[1, 1].set_title('System Status', fontsize=14, fontweight='bold')
         
-        plt.suptitle('🚀 ENTERPRISE MODEL MONITORING DASHBOARD', 
+        plt.suptitle('ENTERPRISE MODEL MONITORING DASHBOARD', 
                      fontsize=16, fontweight='bold', y=0.98)
         plt.tight_layout()
         
         if save_path:
             plt.savefig(save_path, dpi=300, bbox_inches='tight')
-            print(f"✅ Monitoring dashboard saved to {save_path}")
+            print(f"Monitoring dashboard saved to {save_path}")
         
         plt.show()
     
@@ -260,11 +260,11 @@ class ModelMonitor:
         """Export monitoring history to JSON for reporting."""
         with open(file_path, 'w') as f:
             json.dump(self.monitoring_history, f, indent=2, default=str)
-        print(f"✅ Monitoring report exported to {file_path}")
+        print(f"Monitoring report exported to {file_path}")
 
 def demonstrate_enterprise_monitoring():
     """Demo function showcasing enterprise monitoring capabilities."""
-    print("🚀 ENTERPRISE MODEL MONITORING SYSTEM")
+    print("ENTERPRISE MODEL MONITORING SYSTEM")
     print("=" * 60)
     print("CAPABILITIES DEMONSTRATED:")
     print("• Real-time model performance tracking")
@@ -272,7 +272,7 @@ def demonstrate_enterprise_monitoring():
     print("• Performance degradation alerts")
     print("• Executive dashboard generation")
     print("• Production monitoring workflows")
-    print("\n🎯 BUSINESS VALUE:")
+    print("\nBUSINESS VALUE:")
     print("• Reduced model risk")
     print("• Proactive issue detection")
     print("• Automated reporting")

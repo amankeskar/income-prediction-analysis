@@ -94,37 +94,37 @@ class ExecutiveDashboard:
         
         summary = f"""
         
-        🏆 AI TRANSPARENCY INITIATIVE - EXECUTIVE SUMMARY
+        AI TRANSPARENCY INITIATIVE - EXECUTIVE SUMMARY
         ================================================
         
-        📈 FINANCIAL IMPACT:
+        FINANCIAL IMPACT:
         • ROI: {roi_data['roi_percentage']:,.1f}%
         • Payback Period: {roi_data['payback_period_months']:.1f} months
         • Total Benefits: ${roi_data['total_benefits']:,.0f}
         • 3-Year NPV: ${roi_data['npv_3_years']:,.0f}
         
-        💰 REVENUE & COST IMPACT:
+        REVENUE & COST IMPACT:
         • Revenue Increase: ${roi_data['revenue_gain']:,.0f} (+{self.business_metrics['revenue_impact']['revenue_lift']*100:.0f}%)
         • Cost Reduction: ${roi_data['cost_savings']:,.0f} (-{self.business_metrics['cost_savings']['savings_percentage']*100:.0f}%)
         • Processing Speed: {self.business_metrics['operational_efficiency']['processing_time_reduction']*100:.0f}% faster
         
-        🛡️ RISK MITIGATION:
+        RISK MITIGATION:
         • Compliance Violations Prevented: {self.business_metrics['risk_metrics']['compliance_violations_prevented']}
         • Estimated Fine Savings: ${roi_data['risk_mitigation_value']:,.0f}
         • Reputation Risk Reduction: {self.business_metrics['risk_metrics']['reputation_risk_score']*100:.0f}%
         
-        🎯 STRATEGIC ADVANTAGES:
+        STRATEGIC ADVANTAGES:
         • Market differentiation through responsible AI
         • Enhanced stakeholder trust and transparency
         • Regulatory compliance and audit readiness
         • Future-proofed AI governance framework
         
-        📊 MODEL PERFORMANCE:
+        MODEL PERFORMANCE:
         • Accuracy: {self.model_performance.get('accuracy', 0.85)*100:.1f}%
         • Precision: {self.model_performance.get('precision', 0.82)*100:.1f}%
         • ROC AUC: {self.model_performance.get('roc_auc', 0.88):.3f}
         
-        ✅ RECOMMENDATION: Continue investment in AI transparency capabilities
+        RECOMMENDATION: Continue investment in AI transparency capabilities
         """
         
         print(summary)
@@ -249,13 +249,13 @@ class ExecutiveDashboard:
         axes[1, 2].text(8, 8, 'Strategic\nInitiatives', fontsize=12, fontweight='bold',
                        bbox=dict(boxstyle='round', facecolor='lightblue', alpha=0.5))
         
-        plt.suptitle('🚀 AI TRANSPARENCY - EXECUTIVE DASHBOARD', 
+        plt.suptitle('AI TRANSPARENCY - EXECUTIVE DASHBOARD', 
                      fontsize=20, fontweight='bold', y=0.98)
         plt.tight_layout()
         
         if save_path:
             plt.savefig(save_path, dpi=300, bbox_inches='tight')
-            print(f"✅ Executive dashboard saved to {save_path}")
+            print(f"Executive dashboard saved to {save_path}")
         
         plt.show()
     
@@ -265,7 +265,7 @@ class ExecutiveDashboard:
         
         presentation = f"""
         
-        🎯 BOARD PRESENTATION: AI TRANSPARENCY INITIATIVE
+        BOARD PRESENTATION: AI TRANSPARENCY INITIATIVE
         ===============================================
         
         EXECUTIVE SUMMARY:
@@ -279,10 +279,10 @@ class ExecutiveDashboard:
         • Cost Savings: ${roi_data['cost_savings']:,.0f}
         
         STRATEGIC VALUE:
-        ✓ Regulatory compliance and audit readiness
-        ✓ Enhanced stakeholder trust and transparency  
-        ✓ Competitive differentiation in responsible AI
-        ✓ Risk mitigation worth ${roi_data['risk_mitigation_value']:,.0f}
+        - Regulatory compliance and audit readiness
+        - Enhanced stakeholder trust and transparency  
+        - Competitive differentiation in responsible AI
+        - Risk mitigation worth ${roi_data['risk_mitigation_value']:,.0f}
         
         RECOMMENDATION:
         Approve continued investment in AI transparency capabilities to maintain
@@ -294,7 +294,7 @@ class ExecutiveDashboard:
 
 def demonstrate_executive_value():
     """Demonstrate executive-level business value."""
-    print("🏆 EXECUTIVE BUSINESS INTELLIGENCE DEMO")
+    print("EXECUTIVE BUSINESS INTELLIGENCE DEMO")
     print("=" * 60)
     print("DEMONSTRATES:")
     print("• C-suite level business analysis")
@@ -302,7 +302,7 @@ def demonstrate_executive_value():
     print("• Strategic value assessment")
     print("• Risk mitigation quantification")
     print("• Board-ready presentations")
-    print("\n💼 SHOWS BUSINESS ACUMEN:")
+    print("\nSHOWS BUSINESS ACUMEN:")
     print("• Understanding of enterprise priorities")
     print("• Ability to translate technical value to business impact")
     print("• Executive communication skills")

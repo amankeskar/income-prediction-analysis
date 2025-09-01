@@ -89,7 +89,7 @@ class FairnessAnalyzer:
         }
         
         for feature_name in self.sensitive_features:
-            print(f"\n📊 Analyzing fairness for: {feature_name}")
+            print(f"\nAnalyzing fairness for: {feature_name}")
             
             # Demographic Parity
             dp_results = self.demographic_parity(feature_name)
@@ -107,7 +107,7 @@ class FairnessAnalyzer:
             for group, rate in dp_results['group_rates'].items():
                 print(f"  {group}: {rate:.3f}")
             print(f"Disparate Impact: {dp_results['disparate_impact']:.3f}")
-            print(f"Passes 80% Rule: {'✅' if dp_results['is_fair'] else '❌'}")
+            print(f"Passes 80% Rule: {'PASS' if dp_results['is_fair'] else 'FAIL'}")
             
         return report
     
@@ -135,7 +135,7 @@ class FairnessAnalyzer:
             
             # Add fairness indicator
             color = 'green' if dp_results['is_fair'] else 'red'
-            symbol = '✅' if dp_results['is_fair'] else '❌'
+            symbol = 'PASS' if dp_results['is_fair'] else 'FAIL'
             axes[0, i].text(0.5, 0.95, f'{symbol} DI: {dp_results["disparate_impact"]:.3f}', 
                            transform=axes[0, i].transAxes, ha='center', va='top',
                            bbox=dict(boxstyle='round', facecolor=color, alpha=0.3))
@@ -162,14 +162,14 @@ class FairnessAnalyzer:
         
         if save_path:
             plt.savefig(save_path, dpi=300, bbox_inches='tight')
-            print(f"✅ Fairness analysis saved to {save_path}")
+            print(f"Fairness analysis saved to {save_path}")
         
         plt.show()
         
     def generate_business_impact_summary(self):
         """Generate executive summary for business stakeholders."""
         summary = """
-        🎯 AI FAIRNESS & COMPLIANCE EXECUTIVE SUMMARY
+        AI FAIRNESS & COMPLIANCE EXECUTIVE SUMMARY
         ============================================
         
         KEY FINDINGS:
@@ -196,7 +196,7 @@ class FairnessAnalyzer:
 
 def run_fairness_analysis():
     """Demonstration function for recruiters."""
-    print("🚀 ENTERPRISE AI FAIRNESS ANALYSIS")
+    print("ENTERPRISE AI FAIRNESS ANALYSIS")
     print("=" * 50)
     print("Demonstrating world-class AI governance capabilities...")
     print("Features: Bias Detection | Regulatory Compliance | Risk Management")

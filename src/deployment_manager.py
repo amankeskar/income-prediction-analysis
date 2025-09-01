@@ -543,7 +543,7 @@ class DeploymentManager:
         # Create documentation
         self._create_deployment_docs(output_path)
         
-        self.logger.info("✅ Deployment package created successfully!")
+        self.logger.info("Deployment package created successfully!")
         return output_path
     
     def _create_monitoring_configs(self, monitoring_dir: Path):
@@ -611,7 +611,7 @@ groups:
 
 set -e
 
-echo "🚀 Deploying {self.config.model_name} v{self.config.version}"
+echo "Deploying {self.config.model_name} v{self.config.version}"
 
 # Build Docker image
 echo "📦 Building Docker image..."
