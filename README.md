@@ -1,8 +1,8 @@
 # Income Prediction Analysis
 
-## ML Project for Data Science Course
+## Personal ML Learning Project
 
-This is my final project for my machine learning course where I built an income prediction model using the Adult Census dataset. I learned a lot about different aspects of ML beyond just training models.
+This is a personal project I built to explore different aspects of machine learning beyond just training models. I wanted to understand things like model fairness, monitoring, and business impact using the Adult Census dataset for income prediction.
 
 ## What I Built
 
@@ -82,4 +82,4 @@ If I continue this project, I'd like to:
 
 ---
 
-This was a good learning experience for understanding ML beyond just training models. The monitoring and fairness parts were especially interesting since I hadn't thought about those aspects much before.
+This was a really interesting learning project that helped me understand ML from a more holistic perspective. The monitoring and fairness aspects were completely new to me and gave me insights into what production ML actually looks like.
